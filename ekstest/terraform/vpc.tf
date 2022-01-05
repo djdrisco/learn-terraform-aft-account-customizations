@@ -3,9 +3,10 @@ variable "region" {
   description = "AWS region"
 }
 
-provider "aws" {
-  region = var.region
-}
+#note: duplicate provider - already defined in aft-providers.jinja
+#provider "aws" {
+#  region = var.region
+# }
 
 data "aws_availability_zones" "available" {}
 
