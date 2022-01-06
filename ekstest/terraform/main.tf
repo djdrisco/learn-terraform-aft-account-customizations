@@ -108,7 +108,7 @@ module "eks" {
     # Use a custom AMI
     custom_ami = {
       # Current default AMI used by managed node groups - pseudo "custom"
-      ami_id = "ami-0caf35bc73450c396"
+      ami_id = "ami-0d3cd92eb7f0dbfd5"
 
       # This will ensure the boostrap user data is used to join the node
       # By default, EKS managed node groups will not append bootstrap script;
@@ -128,7 +128,7 @@ module "eks" {
       max_size     = 7
       desired_size = 1
 
-      ami_id                     = "ami-0caf35bc73450c396"
+      ami_id                     = "ami-0d3cd92eb7f0dbfd5"
       enable_bootstrap_user_data = true
       bootstrap_extra_args       = "--container-runtime containerd --kubelet-extra-args '--max-pods=20'"
 
