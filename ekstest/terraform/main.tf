@@ -76,8 +76,8 @@ module "eks" {
 
     # Custom AMI, using module provided bootstrap data
     bottlerocket_custom = {
-      # Current bottlerocket AMI
-      ami_id   = "ami-0ff61e0bcfc81dc94"
+      # Current bottlerocket AMI in Us-East-1 , note: different regions have different AMIs for this
+      ami_id   = "ami-0d3cd92eb7f0dbfd5"
       platform = "bottlerocket"
 
       # use module user data template to boostrap
